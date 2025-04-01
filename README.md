@@ -7,7 +7,7 @@ With Open Watcom 1.9 installed, just run "wmake" to build all effects.
 ## Effects
 
 ### Fire
-A simple fire effect with some horizontal impact on the seed lines to make it more interesting.
+A simple fire effect with some horizontal offset on the seed lines to make it more interesting.
 
 ![fire_000](https://github.com/user-attachments/assets/8ff3ccd0-154b-4b8e-8a3e-e7aefc042f7b)
 

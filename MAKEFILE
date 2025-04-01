@@ -5,7 +5,7 @@ coptions = /4r /s /ox
 .c.obj
  wcc386 $(coptions) $<
 
-all: fire.exe plasma.exe wormhole.exe
+all: fire.exe plasma.exe wormhole.exe rotozoom.exe
  
 fire.exe: fire.obj $(objects_common)
  %write fire.lnk 	NAME	$@
@@ -27,6 +27,13 @@ wormhole.exe: wormhole.obj $(objects_common)
  %write wormhole.lnk	FILE	{$(objects_common)}
  %write wormhole.lnk	FILE	wormhole.obj
  wlink  @wormhole.lnk
+
+rotozoom.exe: rotozoom.obj $(objects_common)
+ %write rotozoom.lnk 	NAME	$@
+ %write rotozoom.lnk	SYSTEM	DOS4G
+ %write rotozoom.lnk	FILE	{$(objects_common)}
+ %write rotozoom.lnk	FILE	rotozoom.obj
+ wlink  @rotozoom.lnk
 
 clean : .SYMBOLIC
  del *.obj

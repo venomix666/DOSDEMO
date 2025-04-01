@@ -20,3 +20,9 @@ Classic plasma effect using a sine table and fixed point arithmetic.
 Palette rotation wormhole effect. It doesn't look very good right now as the bitmap was converted from a 640x480 BMP to a 320x200 PCX and a lot of artefacts were introduced.
 
 ![wormhole_000](https://github.com/user-attachments/assets/379eab68-937b-4176-85ce-3e3f3e764239)
+
+### Rotozoom
+Rotozoom effect, rotating and zooming a texture read from a .PCX-file using a sine table and fixed point arithmetic.
+
+![rotozoom_000](https://github.com/user-attachments/assets/f51b284b-4a58-4e98-878e-4970661fed77)
+

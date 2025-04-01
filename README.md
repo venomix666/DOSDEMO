@@ -1,5 +1,5 @@
 # DOSDEMO
-A small collection of simple demo effects for DOS using mode 13h, written to be complied with [Open Watcom 1.9](https://github.com/open-watcom/open-watcom-1.9). 
+A small collection of simple demo effects for DOS using mode 13h, written to be compiled with [Open Watcom 1.9](https://github.com/open-watcom/open-watcom-1.9). 
 
 ## Building
 With Open Watcom 1.9 installed, just run "wmake" to build all effects.

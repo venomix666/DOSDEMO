@@ -1,0 +1,34 @@
+objects_common = gfxlib.obj
+
+coptions = /4r /s /ox
+
+.c.obj
+ wcc386 $(coptions) $<
+
+all: fire.exe plasma.exe wormhole.exe
+ 
+fire.exe: fire.obj $(objects_common)
+ %write fire.lnk 	NAME	$@
+ %write fire.lnk	SYSTEM	DOS4G
+ %write fire.lnk	FILE	{$(objects_common)}
+ %write fire.lnk	FILE	fire.obj
+ wlink  @fire.lnk
+
+plasma.exe: plasma.obj $(objects_common)
+ %write plasma.lnk 	NAME	$@
+ %write plasma.lnk	SYSTEM	DOS4G
+ %write plasma.lnk	FILE	{$(objects_common)}
+ %write plasma.lnk	FILE	plasma.obj
+ wlink  @plasma.lnk
+
+wormhole.exe: wormhole.obj $(objects_common)
+ %write wormhole.lnk 	NAME	$@
+ %write wormhole.lnk	SYSTEM	DOS4G
+ %write wormhole.lnk	FILE	{$(objects_common)}
+ %write wormhole.lnk	FILE	wormhole.obj
+ wlink  @wormhole.lnk
+
+clean : .SYMBOLIC
+ del *.obj
+ del *.lnk
+ del *.exe

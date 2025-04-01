@@ -76,13 +76,13 @@ void readPCX(const char *filename, char *buffer, char *pal_r, char *pal_g,
 	// Seek to palette position
 	fseek(image, -0x300, SEEK_END);
 	// Read palette
-	for(i=0; i<255; i++) {
+	for(i=0; i<256; i++) {
 		fread(&data_i, sizeof(data_i), 1, image);
-		pal_r[i]=data_i<<3;
+		pal_r[i]=data_i>>2;
 		fread(&data_i, sizeof(data_i), 1, image);
-		pal_g[i]=data_i<<3;
+		pal_g[i]=data_i>>2;
 		fread(&data_i, sizeof(data_i), 1, image);
-		pal_b[i]=data_i<<3;
+		pal_b[i]=data_i>>2;
 	}
 	fclose(image);
 }
